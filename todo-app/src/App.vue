@@ -1,0 +1,43 @@
+<template>
+    <img alt="cat typing" src="./assets/cat_typing.gif" width=200>
+	<h1>Todo List App</h1>
+	<router-view/>
+</template>
+
+<script lang="ts">
+import { defineComponent, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
+import { useStore } from './store';
+import { ACTIONS } from './store/actions'
+import { GetTodoListPayload } from './types/store';
+
+export default defineComponent({
+    name: 'App',
+
+	setup() {
+		const store = useStore()
+		const route = useRoute()
+
+		const todoListId = ref()
+
+		watch(
+			() => route.params.id,
+			newTodoListId => {
+				todoListId.value = newTodoListId
+				store.dispatch(ACTIONS.GET_TODO_LIST, {
+					todoListId: newTodoListId
+				} as GetTodoListPayload)
+			}
+		)
+	}
+});
+</script>
+
+<style>
+body {
+	background-color: black;
+	color: white;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 3em;
+}
+</style>
