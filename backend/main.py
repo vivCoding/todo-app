@@ -13,7 +13,10 @@ todo_db = TodoDatabase()
 
 @app.get("/")
 async def index(request: Request):
-	print (request)
+	return templates.TemplateResponse("index.html", context={"request": request})
+
+@app.get('/createlist')
+async def create_list():
 	todo_list_id = uuid4().hex
 	todo_db.create_todo_list(todo_list_id)
 	return RedirectResponse(f'/{todo_list_id}')

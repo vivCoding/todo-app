@@ -1,17 +1,17 @@
 (function (t) {
 	function e(e) {
-		for (var o, i, a = e[0], u = e[1], d = e[2], l = 0, f = []; l < a.length; l++) i = a[l], Object.prototype.hasOwnProperty.call(r, i) && r[i] && f.push(r[i][0]), r[i] = 0;
-		for (o in u) Object.prototype.hasOwnProperty.call(u, o) && (t[o] = u[o]);
+		for (var o, i, u = e[0], a = e[1], d = e[2], l = 0, O = []; l < u.length; l++) i = u[l], Object.prototype.hasOwnProperty.call(r, i) && r[i] && O.push(r[i][0]), r[i] = 0;
+		for (o in a) Object.prototype.hasOwnProperty.call(a, o) && (t[o] = a[o]);
 		s && s(e);
-		while (f.length) f.shift()();
+		while (O.length) O.shift()();
 		return c.push.apply(c, d || []), n()
 	}
 
 	function n() {
 		for (var t, e = 0; e < c.length; e++) {
-			for (var n = c[e], o = !0, a = 1; a < n.length; a++) {
-				var u = n[a];
-				0 !== r[u] && (o = !1)
+			for (var n = c[e], o = !0, u = 1; u < n.length; u++) {
+				var a = n[u];
+				0 !== r[a] && (o = !1)
 			}
 			o && (c.splice(e--, 1), t = i(i.s = n[0]))
 		}
@@ -65,11 +65,11 @@
 	}, i.o = function (t, e) {
 		return Object.prototype.hasOwnProperty.call(t, e)
 	}, i.p = "/";
-	var a = window["webpackJsonp"] = window["webpackJsonp"] || [],
-		u = a.push.bind(a);
-	a.push = e, a = a.slice();
-	for (var d = 0; d < a.length; d++) e(a[d]);
-	var s = u;
+	var u = window["webpackJsonp"] = window["webpackJsonp"] || [],
+		a = u.push.bind(u);
+	u.push = e, u = u.slice();
+	for (var d = 0; d < u.length; d++) e(u[d]);
+	var s = a;
 	c.push([0, "chunk-vendors"]), n()
 })({
 	0: function (t, e, n) {
@@ -82,11 +82,11 @@
 		"use strict";
 		n("ff22")
 	},
-	"60a8": function (t, e, n) {},
-	"80bc": function (t, e, n) {
+	"5a1c": function (t, e, n) {
 		"use strict";
-		n("60a8")
+		n("6909")
 	},
+	6909: function (t, e, n) {},
 	cd49: function (t, e, n) {
 		"use strict";
 		n.r(e);
@@ -95,23 +95,35 @@
 			r = n("0c73"),
 			c = n.n(r),
 			i = Object(o["f"])("h1", null, "vTodo List App", -1),
-			a = Object(o["f"])("p", null, "Get jazz done.", -1),
-			u = Object(o["f"])("img", {
+			u = Object(o["f"])("p", null, "Get jazz done.", -1),
+			a = Object(o["f"])("img", {
 				alt: "cat typing",
 				src: c.a,
 				width: "150"
-			}, null, -1);
+			}, null, -1),
+			d = Object(o["f"])("br", null, null, -1),
+			s = Object(o["f"])("br", null, null, -1),
+			l = Object(o["f"])("br", null, null, -1),
+			O = Object(o["f"])("br", null, null, -1),
+			f = Object(o["f"])("a", {
+				href: "https://github.com/vivCoding/vtodo",
+				target: "_blank"
+			}, "GitHub", -1);
 
-		function d(t, e, n, r, c, d) {
-			var s = Object(o["y"])("router-view");
-			return Object(o["r"])(), Object(o["e"])(o["a"], null, [i, a, u, Object(o["h"])(s)], 64)
+		function p(t, e, n, r, c, p) {
+			var b = Object(o["y"])("router-view");
+			return Object(o["r"])(), Object(o["e"])(o["a"], null, [i, u, a, Object(o["h"])(b), d, s, Object(o["f"])("button", {
+				onClick: e[0] || (e[0] = function () {
+					return t.createList && t.createList.apply(t, arguments)
+				})
+			}, "Create New List"), l, O, f], 64)
 		}
-		var s, l, f, O = n("6c02"),
-			b = n("1da1"),
-			p = n("ade3"),
-			j = (n("96cf"), n("d3b7"), n("25f0"), n("4de4"), n("7db0"), n("a4d3"), n("e01a"), n("5502")),
-			v = function () {
-				var t = Object(b["a"])(regeneratorRuntime.mark((function t(e) {
+		var b, j, v, h = n("6c02"),
+			m = n("1da1"),
+			T = n("ade3"),
+			g = (n("96cf"), n("d3b7"), n("25f0"), n("4de4"), n("7db0"), n("a4d3"), n("e01a"), n("5502")),
+			y = function () {
+				var t = Object(m["a"])(regeneratorRuntime.mark((function t(e) {
 					return regeneratorRuntime.wrap((function (t) {
 						while (1) switch (t.prev = t.next) {
 							case 0:
@@ -136,8 +148,8 @@
 					return t.apply(this, arguments)
 				}
 			}(),
-			h = function () {
-				var t = Object(b["a"])(regeneratorRuntime.mark((function t(e) {
+			L = function () {
+				var t = Object(m["a"])(regeneratorRuntime.mark((function t(e) {
 					var n;
 					return regeneratorRuntime.wrap((function (t) {
 						while (1) switch (t.prev = t.next) {
@@ -169,33 +181,33 @@
 			}();
 		(function (t) {
 			t["ADD_TODO"] = "addTodo", t["REMOVE_TODO"] = "removeTodo", t["MARK_COMPLETION"] = "markCompletion", t["SAVE_TODO_LIST"] = "saveTodoList", t["GET_TODO_LIST"] = "getTodoList", t["SET_TODOS"] = "setTodoLists"
-		})(s || (s = {}));
-		var m = Object(j["a"])({
+		})(b || (b = {}));
+		var _ = Object(g["a"])({
 				state: {
 					todos: [],
 					todoListId: ""
 				},
-				mutations: (l = {}, Object(p["a"])(l, s.ADD_TODO, (function (t, e) {
+				mutations: (j = {}, Object(T["a"])(j, b.ADD_TODO, (function (t, e) {
 					t.todos.push({
 						id: Math.random().toString(16).substr(2, 8),
 						todo: e.todo,
 						completed: !1
 					})
-				})), Object(p["a"])(l, s.REMOVE_TODO, (function (t, e) {
+				})), Object(T["a"])(j, b.REMOVE_TODO, (function (t, e) {
 					t.todos = t.todos.filter((function (t) {
 						return t.id != e.id
 					}))
-				})), Object(p["a"])(l, s.MARK_COMPLETION, (function (t, e) {
+				})), Object(T["a"])(j, b.MARK_COMPLETION, (function (t, e) {
 					var n, o = t.todos.find((function (t) {
 						return t.id == e.id
 					}));
 					o && (o.completed = null === (n = e.completed) || void 0 === n || n)
-				})), Object(p["a"])(l, s.SET_TODOS, (function (t, e) {
+				})), Object(T["a"])(j, b.SET_TODOS, (function (t, e) {
 					t.todoListId = e.todoListId, t.todos = e.todos
-				})), l),
-				actions: (f = {}, Object(p["a"])(f, s.SAVE_TODO_LIST, (function () {
+				})), j),
+				actions: (v = {}, Object(T["a"])(v, b.SAVE_TODO_LIST, (function () {
 					var t = this;
-					return Object(b["a"])(regeneratorRuntime.mark((function e() {
+					return Object(m["a"])(regeneratorRuntime.mark((function e() {
 						var n;
 						return regeneratorRuntime.wrap((function (e) {
 							while (1) switch (e.prev = e.next) {
@@ -203,7 +215,7 @@
 									return n = JSON.stringify({
 										todo_list_id: t.state.todoListId,
 										todos: t.state.todos
-									}), e.next = 3, v(n);
+									}), e.next = 3, y(n);
 								case 3:
 									alert("Saved list! Access this URL anytime to view it again.");
 								case 4:
@@ -212,15 +224,15 @@
 							}
 						}), e)
 					})))()
-				})), Object(p["a"])(f, s.GET_TODO_LIST, (function (t, e) {
-					return Object(b["a"])(regeneratorRuntime.mark((function n() {
+				})), Object(T["a"])(v, b.GET_TODO_LIST, (function (t, e) {
+					return Object(m["a"])(regeneratorRuntime.mark((function n() {
 						var o;
 						return regeneratorRuntime.wrap((function (n) {
 							while (1) switch (n.prev = n.next) {
 								case 0:
-									return n.next = 2, h(e.todoListId);
+									return n.next = 2, L(e.todoListId);
 								case 2:
-									o = n.sent, console.log(o), t.commit(s.SET_TODOS, {
+									o = n.sent, console.log(o), t.commit(b.SET_TODOS, {
 										todoListId: e.todoListId,
 										todos: o
 									});
@@ -230,48 +242,48 @@
 							}
 						}), n)
 					})))()
-				})), f)
+				})), v)
 			}),
-			T = Symbol(),
-			g = function () {
-				return Object(j["b"])(T)
+			w = Symbol(),
+			I = function () {
+				return Object(g["b"])(w)
 			},
-			y = m,
-			L = Object(o["i"])({
+			S = _,
+			C = Object(o["i"])({
 				name: "App",
 				setup: function () {
-					var t = g(),
-						e = Object(O["c"])(),
+					var t = I(),
+						e = Object(h["c"])(),
 						n = Object(o["w"])();
 					Object(o["E"])((function () {
 						return e.params.id
 					}), (function (e) {
-						n.value = e, t.dispatch(s.GET_TODO_LIST, {
+						n.value = e, t.dispatch(b.GET_TODO_LIST, {
 							todoListId: e
 						})
-					}))
+					}));
+					var r = function () {
+						var t;
+						null === (t = window.open("/createlist", "_blank")) || void 0 === t || t.focus()
+					};
+					return {
+						createList: r
+					}
 				}
 			});
-		n("80bc");
-		L.render = d;
-		var _ = L;
-		Object(o["u"])("data-v-5c5ba4f1");
-		var w = Object(o["f"])("strong", null, "My List ID:", -1),
-			I = Object(o["g"])(),
-			S = Object(o["g"])("  "),
-			C = Object(o["g"])("  "),
-			D = Object(o["f"])("br", null, null, -1),
-			A = Object(o["f"])("br", null, null, -1),
-			E = Object(o["f"])("a", {
-				href: "https://github.com/vivCoding/vtodo",
-				target: "_blank"
-			}, "GitHub", -1);
+		n("5a1c");
+		C.render = p;
+		var D = C,
+			A = Object(o["f"])("strong", null, "My List ID:", -1),
+			E = Object(o["g"])(),
+			R = Object(o["g"])("  "),
+			k = Object(o["g"])("  ");
 
-		function R(t, e, n, r, c, i) {
-			var a = Object(o["y"])("todo-input"),
-				u = Object(o["y"])("todo-item");
-			return Object(o["r"])(), Object(o["e"])(o["a"], null, [Object(o["f"])("p", null, [w, I, Object(o["f"])("i", null, Object(o["A"])(t.todoListId), 1)]), Object(o["h"])(a), Object(o["f"])("ul", null, [(Object(o["r"])(!0), Object(o["e"])(o["a"], null, Object(o["x"])(t.todos, (function (t) {
-				return Object(o["r"])(), Object(o["d"])(u, {
+		function x(t, e, n, r, c, i) {
+			var u = Object(o["y"])("todo-input"),
+				a = Object(o["y"])("todo-item");
+			return Object(o["r"])(), Object(o["e"])(o["a"], null, [Object(o["f"])("p", null, [A, E, Object(o["f"])("i", null, Object(o["A"])(t.todoListId), 1)]), Object(o["h"])(u), Object(o["f"])("ul", null, [(Object(o["r"])(!0), Object(o["e"])(o["a"], null, Object(o["x"])(t.todos, (function (t) {
+				return Object(o["r"])(), Object(o["d"])(a, {
 					key: t.id,
 					todo: t
 				}, null, 8, ["todo"])
@@ -281,37 +293,33 @@
 				onClick: e[0] || (e[0] = function () {
 					return t.saveList && t.saveList.apply(t, arguments)
 				})
-			}, "Save list"), S, Object(o["f"])("button", {
+			}, "Save list"), R, Object(o["f"])("button", {
 				onClick: e[1] || (e[1] = function () {
 					return t.shareList && t.shareList.apply(t, arguments)
 				})
-			}, "Share List"), C, Object(o["f"])("button", {
-				onClick: e[2] || (e[2] = function () {
-					return t.createList && t.createList.apply(t, arguments)
-				})
-			}, "Create New List"), D, A, E], 64)
+			}, "Share List"), k], 64)
 		}
-		Object(o["s"])(), Object(o["u"])("data-v-23555080");
-		var k = Object(o["g"])("  "),
-			x = Object(o["g"])("  ");
+		Object(o["u"])("data-v-23555080");
+		var M = Object(o["g"])("  "),
+			P = Object(o["g"])("  ");
 
-		function M(t, e, n, r, c, i) {
+		function V(t, e, n, r, c, i) {
 			return Object(o["r"])(), Object(o["e"])("li", null, [Object(o["f"])("button", {
 				onClick: e[0] || (e[0] = function () {
 					return t.handleRemoveTodo && t.handleRemoveTodo.apply(t, arguments)
 				})
-			}, "Remove"), k, Object(o["f"])("button", {
+			}, "Remove"), M, Object(o["f"])("button", {
 				onClick: e[1] || (e[1] = function () {
 					return t.handleCompletedTodo && t.handleCompletedTodo.apply(t, arguments)
 				})
-			}, Object(o["A"])(t.hasCompleted ? "Incomplete" : "Completed"), 1), x, Object(o["f"])("span", {
+			}, Object(o["A"])(t.hasCompleted ? "Incomplete" : "Completed"), 1), P, Object(o["f"])("span", {
 				class: Object(o["n"])({
 					completed: t.hasCompleted
 				})
 			}, Object(o["A"])(t.item.todo), 3)])
 		}
 		Object(o["s"])();
-		var P = Object(o["i"])({
+		var G = Object(o["i"])({
 			name: "TodoItem",
 			props: {
 				todo: {
@@ -320,17 +328,17 @@
 				}
 			},
 			setup: function (t) {
-				var e = g(),
+				var e = I(),
 					n = Object(o["w"])(t.todo),
 					r = n.value.id,
 					c = function () {
-						e.commit(s.REMOVE_TODO, {
+						e.commit(b.REMOVE_TODO, {
 							id: r
 						})
 					},
 					i = Object(o["w"])(n.value.completed),
-					a = function () {
-						i.value = !i.value, e.commit(s.MARK_COMPLETION, {
+					u = function () {
+						i.value = !i.value, e.commit(b.MARK_COMPLETION, {
 							id: r,
 							completed: i.value
 						})
@@ -339,35 +347,35 @@
 					item: n,
 					handleRemoveTodo: c,
 					hasCompleted: i,
-					handleCompletedTodo: a
+					handleCompletedTodo: u
 				}
 			}
 		});
 		n("2cb1");
-		P.render = M, P.__scopeId = "data-v-23555080";
-		var V = P,
-			G = Object(o["g"])("  ");
+		G.render = V, G.__scopeId = "data-v-23555080";
+		var N = G,
+			J = Object(o["g"])("  ");
 
-		function N(t, e, n, r, c, i) {
+		function K(t, e, n, r, c, i) {
 			return Object(o["r"])(), Object(o["e"])(o["a"], null, [Object(o["F"])(Object(o["f"])("input", {
 				"onUpdate:modelValue": e[0] || (e[0] = function (e) {
 					return t.todoToAdd = e
 				})
 			}, null, 512), [
 				[o["C"], t.todoToAdd]
-			]), G, Object(o["f"])("button", {
+			]), J, Object(o["f"])("button", {
 				onClick: e[1] || (e[1] = function () {
 					return t.handleAddTodo && t.handleAddTodo.apply(t, arguments)
 				})
 			}, "Add Todo")], 64)
 		}
-		var J = Object(o["i"])({
+		var U = Object(o["i"])({
 			name: "TodoInput",
 			setup: function () {
-				var t = g(),
+				var t = I(),
 					e = Object(o["w"])(""),
 					n = function () {
-						t.commit(s.ADD_TODO, {
+						t.commit(b.ADD_TODO, {
 							todo: e.value
 						}), e.value = ""
 					};
@@ -377,27 +385,23 @@
 				}
 			}
 		});
-		J.render = N;
-		var K = J,
-			U = Object(o["i"])({
+		U.render = K;
+		var z = U,
+			F = Object(o["i"])({
 				name: "TodoList",
 				components: {
-					TodoItem: V,
-					TodoInput: K
+					TodoItem: N,
+					TodoInput: z
 				},
 				setup: function () {
-					var t = g(),
+					var t = I(),
 						e = function () {
-							t.dispatch(s.SAVE_TODO_LIST)
+							t.dispatch(b.SAVE_TODO_LIST)
 						},
 						n = function () {
 							navigator.clipboard.writeText(window.location.href).then((function () {
 								alert("Copied todo list URL to clipboard!")
 							}))
-						},
-						r = function () {
-							var t;
-							null === (t = window.open("/", "_blank")) || void 0 === t || t.focus()
 						};
 					return {
 						todos: Object(o["b"])((function () {
@@ -407,30 +411,23 @@
 							return t.state.todoListId
 						})),
 						saveList: e,
-						shareList: n,
-						createList: r
+						shareList: n
 					}
 				}
 			});
-		n("e9fc");
-		U.render = R, U.__scopeId = "data-v-5c5ba4f1";
-		var z = U,
-			F = [{
+		F.render = x;
+		var q = F,
+			H = [{
 				path: "/:id",
-				component: z
+				component: q
 			}],
-			q = Object(O["a"])({
-				history: Object(O["b"])(),
-				routes: F
+			B = Object(h["a"])({
+				history: Object(h["b"])(),
+				routes: H
 			}),
-			H = q;
-		Object(o["c"])(_).use(H).use(y, T).mount("#app")
-	},
-	e022: function (t, e, n) {},
-	e9fc: function (t, e, n) {
-		"use strict";
-		n("e022")
+			Q = B;
+		Object(o["c"])(D).use(Q).use(S, w).mount("#app")
 	},
 	ff22: function (t, e, n) {}
 });
-//# sourceMappingURL=app.a2436b07.js.map
+//# sourceMappingURL=app.ccde87de.js.map

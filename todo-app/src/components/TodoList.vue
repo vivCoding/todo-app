@@ -10,9 +10,6 @@
 	</ul>
 	<button @click="saveList">Save list</button>&nbsp;
 	<button @click="shareList">Share List</button>&nbsp;
-	<button @click="createList">Create New List</button> 
-	<br><br>
-	<a href='https://github.com/vivCoding/vtodo' target='_blank'>GitHub</a>
 </template>
 
 <script lang="ts">
@@ -40,20 +37,11 @@ export default defineComponent({
 			})
 		}
 
-		const createList = () => {
-			window.open('/', '_blank')?.focus()
-		}
-
 		return {
 			todos: computed(() => store.state.todos),
 			todoListId: computed(() => store.state.todoListId),
-			saveList, shareList, createList
+			saveList, shareList
 		}
 	}
 })
 </script>
-<style scoped>
-a {
-	color: cyan;
-}
-</style>
