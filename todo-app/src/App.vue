@@ -1,6 +1,7 @@
 <template>
-    <img alt="cat typing" src="./assets/cat_typing.gif" width=200>
-	<h1>Todo List App</h1>
+	<h1>vTodo List App</h1>
+	<p>Get jazz done.</p>
+    <img alt="cat typing" src="./assets/cat_typing.gif" width=150>
 	<router-view/>
 </template>
 
@@ -38,6 +39,6 @@ body {
 	background-color: black;
 	color: white;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	padding: 3em;
+	padding-left: 2em;
 }
 </style>

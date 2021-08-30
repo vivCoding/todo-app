@@ -1,5 +1,4 @@
 <template>
-	<button @click="createList">Create New List</button>
 	<p><strong>My List ID:</strong> <i>{{ todoListId }}</i></p>
 	<todo-input/>
 	<ul>
@@ -10,8 +9,10 @@
 		<p v-show="todos.length == 0">Nothing to do!</p>
 	</ul>
 	<button @click="saveList">Save list</button>&nbsp;
-	<button @click="shareList">Share List</button>
+	<button @click="shareList">Share List</button>&nbsp;
+	<button @click="createList">Create New List</button> 
 	<br><br>
+	<a href='https://github.com/vivCoding/vtodo' target='_blank'>GitHub</a>
 </template>
 
 <script lang="ts">
@@ -51,3 +52,8 @@ export default defineComponent({
 	}
 })
 </script>
+<style scoped>
+a {
+	color: cyan;
+}
+</style>
